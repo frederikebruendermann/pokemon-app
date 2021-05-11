@@ -1,5 +1,18 @@
 import "./App.css";
+import Card from "./Card";
+import pokemons from "./data.json";
 
 export default function App() {
-  return <div className="App">Hello world</div>;
+  const firstPokemon = pokemons[0];
+
+  return (
+    <div className="App">
+      <Card
+        name={firstPokemon.name}
+        types={firstPokemon.types}
+        frontImage={firstPokemon.images.front}
+        backImage={firstPokemon.images.back}
+      />
+    </div>
+  );
 }
